@@ -7,11 +7,8 @@ require('dotenv').config();
 const app = express();
 
 // Enable CORS
-app.use(cors({
-    origin: '*',         // Allow all origins
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  // Allow specific methods
-    allowedHeaders: ['Content-Type', 'Authorization'],   // Allow specific headers
-}));
+app.use(cors());
+app.options('*', cors());
 //ct to the database
 connectDB();
 
