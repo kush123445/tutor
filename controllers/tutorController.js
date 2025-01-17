@@ -258,7 +258,7 @@ const submitForm = async (req, res) => {
   
   const adminEmailSubject = 'New Tutor Registered';
   
-  await sendEmail('kushalhts00@gmail.com', adminEmailSubject, adminEmailContent);
+  await sendEmail('agraluvagarwal@gmail.com', adminEmailSubject, adminEmailContent);
 
     res.status(200).json({ message: 'Verification email sent. Please check your email to verify.' });
   } catch (error) {
@@ -346,7 +346,7 @@ const submitStudentForm = async (req, res) => {
 
       const adminEmailSubject = 'New Student Registered';
 
-await sendEmail('kushalhts00@gmail.com', adminEmailSubject, adminEmailContent);
+await sendEmail('agraluvagarwal@gmail.com', adminEmailSubject, adminEmailContent);
   
       // Step 5: Respond with success message
       res.status(200).json({ message: 'Verification email sent. Please check your email to verify.' });
