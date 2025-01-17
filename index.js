@@ -8,9 +8,11 @@ const app = express();
 
 // Enable CORS
 app.use(cors({
-    origin: '*',  // Allows all origins
+    origin: '*',         // Allow all origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  // Allow specific methods
+    allowedHeaders: ['Content-Type', 'Authorization'],   // Allow specific headers
 }));
-// Connect to the database
+//ct to the database
 connectDB();
 
 // Middleware
