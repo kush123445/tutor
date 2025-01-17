@@ -7,8 +7,9 @@ require('dotenv').config();
 const app = express();
 
 // Enable CORS
-app.use(cors());
-
+app.use(cors({
+    origin: '*',  // Allows all origins
+}));
 // Connect to the database
 connectDB();
 
