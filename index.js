@@ -18,6 +18,10 @@ app.use(express.json());
 // Routes
 app.use('/api', tutorRoutes);
 
+app.get('/',(req,res)=>{
+    res.send('hello')
+})
+
 // Export the express app to be used as a serverless function in Vercel
 module.exports = (req, res) => {
     app(req, res); // Use the express app to handle the request and response
